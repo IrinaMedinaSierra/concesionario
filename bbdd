@@ -1,0 +1,42 @@
+create table if not exists Marca
+(
+    id          int auto_increment
+        primary key,
+    nombreMarca varchar(50) null
+);
+
+create table if not exists color
+(
+    id          int auto_increment
+        primary key,
+    nombreColor varchar(10) null
+);
+
+create table if not exists motor
+(
+    id        int auto_increment
+        primary key,
+    tipoMotor varchar(20) null
+);
+
+create table if not exists vehiculo
+(
+    id               int auto_increment
+        primary key,
+    matricula        varchar(10)      not null,
+    bastidor         varchar(12)      not null,
+    modelo           varchar(50)      null,
+    cilindrada       varchar(25)      null,
+    potencia         int    default 0 null,
+    precio           double default 0 null,
+    fechaFabricacion date             null,
+    extras           text             null,
+    observaciones    text             null,
+    foto             varchar(50)      null,
+    descripcion      varchar(50)      null,
+    metalizado       tinyint(1)       null,
+    idMotor          int              null,
+    idMarca          int              null,
+    idColor          int              null
+)
+    collate = utf8_spanish_ci;
