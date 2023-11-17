@@ -9,10 +9,10 @@
 		$link=mysqli_connect($servidor,$user,$pass,$bbdd);
 		if (mysqli_error($link)){
 			$msn= "Existe un error al conectar con el servidor o BBDD";
-			echo $msn;
+		//	echo $msn;
 		}else{
 			$msn= "Conexión establecida correctamente";
-			echo $msn;
+		//	echo $msn;
 		}
 		return $link;
 	}
